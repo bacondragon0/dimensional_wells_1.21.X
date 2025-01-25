@@ -1,5 +1,7 @@
 package net.bacon.dimensional_wells;
 
+import net.bacon.dimensional_wells.block.ModBlocks;
+import net.bacon.dimensional_wells.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -12,6 +14,8 @@ public class DimensionalWells implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
+		ModBlocks.registerModBlocks();
+		ModItems.registerModItems();
 		LOGGER.info("Hello world!");
 	}
 }

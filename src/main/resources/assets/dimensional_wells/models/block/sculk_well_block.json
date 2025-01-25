@@ -1,0 +1,10 @@
+{
+  "parent": "minecraft:block/template_sculk_shrieker",
+  "textures": {
+    "bottom": "dimensional_wells:block/sculk_well_bottom",
+    "inner_top": "dimensional_wells:block/sculk_well_inner_top",
+    "particle": "dimensional_wells:block/sculk_well_bottom",
+    "side": "dimensional_wells:block/sculk_well_side",
+    "top": "dimensional_wells:block/sculk_well_top"
+  }
+}
