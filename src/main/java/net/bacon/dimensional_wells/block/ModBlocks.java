@@ -1,6 +1,7 @@
 package net.bacon.dimensional_wells.block;
 
 import net.bacon.dimensional_wells.DimensionalWells;
+import net.bacon.dimensional_wells.block.custom.NetherWellBlock;
 import net.bacon.dimensional_wells.block.custom.SculkWellBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
@@ -19,7 +20,10 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
 
     public static final Block SCULK_WELL_BLOCK = registerBlock("sculk_well_block",
-            new SculkWellBlock(AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.SCULK_SHRIEKER).nonOpaque()));
+            new SculkWellBlock(AbstractBlock.Settings.create().strength(10f).requiresTool().sounds(BlockSoundGroup.SCULK_SHRIEKER).nonOpaque()));
+
+    public static final Block NETHER_WELL_BLOCK = registerBlock("nether_well_block",
+            new NetherWellBlock(AbstractBlock.Settings.create().strength(10f).requiresTool().sounds(BlockSoundGroup.SCULK_SHRIEKER).nonOpaque()));
 
 
     private static Block registerBlock(String name, Block block) {
@@ -37,7 +41,9 @@ public class ModBlocks {
     public static void  registerModBlocks() {
         DimensionalWells.LOGGER.info("Registering mod blocks for " + DimensionalWells.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries ->
-                entries.add(ModBlocks.SCULK_WELL_BLOCK));
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(entries -> {
+            entries.add(ModBlocks.SCULK_WELL_BLOCK);
+            entries.add(ModBlocks.NETHER_WELL_BLOCK);
+        });
     }
 }
