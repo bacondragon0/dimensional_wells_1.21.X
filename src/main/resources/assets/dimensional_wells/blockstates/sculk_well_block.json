@@ -1,9 +1,6 @@
 {
   "variants": {
-    "can_summon=false": {
-      "model": "dimensional_wells:block/sculk_well_block"
-    },
-    "can_summon=true": {
+    "": {
       "model": "dimensional_wells:block/sculk_well_block"
     }
   }

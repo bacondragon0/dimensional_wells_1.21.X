@@ -1,9 +1,12 @@
 package net.bacon.dimensional_wells.block;
 
 import net.bacon.dimensional_wells.DimensionalWells;
+import net.bacon.dimensional_wells.block.custom.SculkWellBlock;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.EnchantingTableBlock;
+import net.minecraft.block.SculkShriekerBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -16,12 +19,12 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
 
     public static final Block SCULK_WELL_BLOCK = registerBlock("sculk_well_block",
-            new Block(AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.SCULK_SHRIEKER)));
+            new SculkWellBlock(AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.SCULK_SHRIEKER).nonOpaque()));
 
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
-        return  Registry.register(Registries.BLOCK, Identifier.of(DimensionalWells.MOD_ID), block);
+        return  Registry.register(Registries.BLOCK, Identifier.of(DimensionalWells.MOD_ID, name), block);
     }
 
 

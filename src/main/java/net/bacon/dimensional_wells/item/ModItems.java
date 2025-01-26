@@ -13,7 +13,6 @@ public class ModItems {
 
     public static final Item UNSTABLE_MATTER = registerItem("unstable_matter", new Item(new Item.Settings()));
 
-
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(DimensionalWells.MOD_ID, name), item);
     }
