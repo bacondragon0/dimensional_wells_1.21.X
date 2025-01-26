@@ -2,5 +2,6 @@
   "item.dimensional_wells.unstable_matter": "Unstable Matter",
 
   "block.dimensional_wells.sculk_well_block": "Sculk Well",
-  "block.dimensional_wells.nether_well_block": "Nether Well"
+  "block.dimensional_wells.nether_well_block": "Nether Well",
+  "block.dimensional_wells.end_well_block": "End Well"
 }

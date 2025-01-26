@@ -21,10 +21,13 @@ import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class SculkWellBlock extends Block {
 
     private final VoxelShape SHAPE = Block.createCuboidShape(0.0,0.0, 0.0, 16.0, 8.0, 16.0);
+
+    float v = 0.8f;
 
     @Override
     protected VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
@@ -48,6 +51,7 @@ public class SculkWellBlock extends Block {
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if (entity instanceof ItemEntity itemEntity && world instanceof ServerWorld) {
+            world.playSoundFromEntity(null, entity, SoundEvents.ENTITY_PLAYER_TELEPORT, SoundCategory.PLAYERS, 1.0f, 0.6f);
             // AMETHYST SHARD TO ECHO SHARD (70% Both ways)
             if (itemEntity.getStack().getItem() == Items.AMETHYST_SHARD) {
                 int itemAmount = itemEntity.getStack().getCount();
@@ -55,7 +59,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.7) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.ECHO_SHARD.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.ECHO_SHARD.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -67,7 +71,20 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.7) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.AMETHYST_SHARD.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.AMETHYST_SHARD.getDefaultStack()));
+                    } else {
+                        AnnihilationParticles(world,pos);
+                    }
+                }
+            }
+            // QUART TO AMETHYST (70%)
+            if (itemEntity.getStack().getItem() == Items.QUARTZ) {
+                int itemAmount = itemEntity.getStack().getCount();
+                itemEntity.setStack(new ItemStack(Items.AIR));
+                for (int i = 0; i < itemAmount; i++) {
+                    if (Math.random() <= 0.7) {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.AMETHYST_SHARD.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -80,7 +97,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.8) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.SCULK.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.SCULK.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -93,7 +110,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.8) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.MUD.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.MUD.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -106,7 +123,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 1.0f) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.DIRT.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.DIRT.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -119,7 +136,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.3f) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.MOSS_BLOCK.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.MOSS_BLOCK.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -132,7 +149,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.95f) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.COPPER_INGOT.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.COPPER_INGOT.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -144,7 +161,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.95f) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.COPPER_BLOCK.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.COPPER_BLOCK.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -156,7 +173,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.8f) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.RAW_COPPER.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.RAW_COPPER.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -168,7 +185,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.8f) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.RAW_COPPER_BLOCK.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.RAW_COPPER_BLOCK.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -181,7 +198,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.50f) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.IRON_INGOT.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.IRON_INGOT.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -193,7 +210,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.50f) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.IRON_BLOCK.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.IRON_BLOCK.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -205,7 +222,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.35f) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.RAW_IRON.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.RAW_IRON.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -217,7 +234,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.35f) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.RAW_IRON_BLOCK.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.RAW_IRON_BLOCK.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -230,7 +247,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.75f) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.GLOW_BERRIES.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.GLOW_BERRIES.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -243,7 +260,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.75f) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.GLOW_INK_SAC.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.GLOW_INK_SAC.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -256,7 +273,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.75f) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.INK_SAC.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.INK_SAC.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -269,7 +286,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.50f) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.BREEZE_ROD.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.BREEZE_ROD.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -282,7 +299,7 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.50f) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.DEEPSLATE.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.DEEPSLATE.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -295,7 +312,20 @@ public class SculkWellBlock extends Block {
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 0.50f) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, Items.COBBLED_DEEPSLATE.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.COBBLED_DEEPSLATE.getDefaultStack()));
+                    } else {
+                        AnnihilationParticles(world,pos);
+                    }
+                }
+            }
+            // GLASS TO TINTED_GLASS (25%)
+            if (itemEntity.getStack().getItem() == Items.GLASS) {
+                int itemAmount = itemEntity.getStack().getCount();
+                itemEntity.setStack(new ItemStack(Items.AIR));
+                for (int i = 0; i < itemAmount; i++) {
+                    if (Math.random() <= 0.25f) {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.TINTED_GLASS.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -303,20 +333,14 @@ public class SculkWellBlock extends Block {
             }
             // RETURN INVALID ITEM
             else {
-                int itemAmount = itemEntity.getStack().getCount();
-                ItemStack item = itemEntity.getStack();
-                itemEntity.setStack(new ItemStack(Items.AIR));
-
-                for (int i = 0; i < itemAmount; i++) {
+                itemEntity.addVelocity(ThreadLocalRandom.current().nextDouble(-0.3, 0.3),0.1f, ThreadLocalRandom.current().nextDouble(-0.3, 0.3));
+                for (int i = 0; i < 1; i++) {
                     ((ServerWorld) world).spawnParticles(ParticleTypes.SMOKE, pos.getX() + 0.5f, pos.getY() + 1.1, pos.getZ() + 0.5f,
-                            5, Math.random() / 5, (Math.random() / 10) * -1,Math.random() / 5,0.1f);
+                            3, Math.random() / 5, (Math.random() / 10) * -1,Math.random() / 5,0.1f);
                     ((ServerWorld) world).spawnParticles(ParticleTypes.SMOKE, pos.getX() + 0.5f, pos.getY() + 1.1, pos.getZ() + 0.5f,
-                            5, Math.random() / 5, (Math.random() / 10) * 1,Math.random() / 5,0.1f);
-                    world.spawnEntity(new ItemEntity(world, pos.getX() + 0.7f, pos.getY() + 0.7f, pos.getZ() + 0.7f, item));
+                            3, Math.random() / 5, (Math.random() / 10) * 1,Math.random() / 5,0.1f);
                 }
-
             }
-            world.playSoundFromEntity(null, entity, SoundEvents.ENTITY_PLAYER_TELEPORT, SoundCategory.PLAYERS, 1.0f, 0.6f);
         }
     }
 

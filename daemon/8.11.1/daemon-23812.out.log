@@ -14477,3 +14477,261 @@ BUILD SUCCESSFUL in 2s
 2025-01-26T16:10:25.450+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
 2025-01-26T16:10:25.450+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
 2025-01-26T16:10:25.450+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:10:35.453+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:10:35.453+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:10:35.454+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:10:35.454+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:10:35.454+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:10:35.454+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:10:35.455+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:10:35.455+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:10:35.455+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:10:45.443+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:10:45.443+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:10:45.443+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:10:45.444+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:10:45.444+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:10:45.444+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:10:45.445+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:10:45.445+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:10:45.445+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:10:55.452+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:10:55.452+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:10:55.452+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:10:55.453+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:10:55.453+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:10:55.453+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:10:55.454+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:10:55.454+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:10:55.454+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:05.456+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:05.456+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:05.456+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:05.457+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:05.457+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:05.457+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:05.457+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:05.458+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:05.458+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:15.455+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:15.455+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:15.455+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:15.456+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:15.456+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:15.456+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:15.457+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:15.457+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:15.457+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:25.454+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:25.454+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:25.455+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:25.456+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:25.456+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:25.456+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:25.457+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:25.457+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:25.457+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:35.457+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:35.457+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:35.458+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:35.458+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:35.458+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:35.458+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:35.459+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:35.459+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:35.459+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:45.447+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:45.447+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:45.447+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:45.447+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:45.447+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:45.448+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:45.448+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:45.448+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:45.448+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:55.443+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:55.443+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:55.443+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:55.443+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:55.444+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:55.444+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:11:55.444+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:11:55.444+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:11:55.445+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:12:05.452+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:12:05.452+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:12:05.452+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:12:05.453+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:12:05.453+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:12:05.453+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:12:05.453+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:12:05.454+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:12:05.454+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:12:15.453+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:12:15.453+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:12:15.453+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:12:15.453+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:12:15.454+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:12:15.454+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:12:15.454+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:12:15.454+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:12:15.455+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:12:25.450+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:12:25.450+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:12:25.450+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:12:25.451+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:12:25.451+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:12:25.451+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:12:25.451+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:12:25.451+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:12:25.452+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:12:35.444+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:12:35.444+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:12:35.444+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:12:35.444+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:12:35.444+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:12:35.445+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:12:35.445+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2025-01-26T16:12:35.445+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:12:35.445+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:12:37.392+0100 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:49295 to /127.0.0.1:63245.
+2025-01-26T16:12:37.399+0100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 3721: received class org.gradle.launcher.daemon.protocol.StopWhenIdle
+2025-01-26T16:12:37.399+0100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 3721: Received non-IO message from client: StopWhenIdle[id=37177cdd-1486-48ae-9f71-37f145f8f61c]
+2025-01-26T16:12:37.400+0100 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: StopWhenIdle[id=37177cdd-1486-48ae-9f71-37f145f8f61c].
+2025-01-26T16:12:37.400+0100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: StopWhenIdle[id=37177cdd-1486-48ae-9f71-37f145f8f61c] with connection: socket connection from /127.0.0.1:63245 to /127.0.0.1:49295.
+2025-01-26T16:12:37.400+0100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Storing daemon stop event: stop command received
+2025-01-26T16:12:37.403+0100 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon stop event with timestamp 1737904357399
+2025-01-26T16:12:37.405+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2025-01-26T16:12:37.406+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:12:37.406+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:12:37.407+0100 [LIFECYCLE] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon will be stopped at the end of the build stop command received
+2025-01-26T16:12:37.407+0100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Marking daemon stopped due to stop command received. The daemon is not running a build
+2025-01-26T16:12:37.407+0100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 3720: dispatching Success[value=null]
+2025-01-26T16:12:37.407+0100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: StopWhenIdle[id=37177cdd-1486-48ae-9f71-37f145f8f61c]
+2025-01-26T16:12:37.407+0100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon has stopped.
+2025-01-26T16:12:37.407+0100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 3721: received class org.gradle.launcher.daemon.protocol.Finished
+2025-01-26T16:12:37.407+0100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 3721: Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@7c86f24c
+2025-01-26T16:12:37.407+0100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: org.gradle.launcher.daemon.protocol.Finished@7c86f24c
+2025-01-26T16:12:37.407+0100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 3720: stopping connection
+2025-01-26T16:12:37.407+0100 [DEBUG] [org.gradle.internal.remote.internal.inet.SocketConnection] Discarding EOFException: java.io.EOFException
+2025-01-26T16:12:37.407+0100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 3721: received null
+2025-01-26T16:12:37.407+0100 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 3721: Received end-of-input from client.
+2025-01-26T16:12:37.408+0100 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 3720: stopping connection
+2025-01-26T16:12:37.409+0100 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stop() called on daemon
+2025-01-26T16:12:37.409+0100 [INFO] [org.gradle.launcher.daemon.server.Daemon] Stop requested. Daemon is removing its presence from the registry...
+2025-01-26T16:12:37.409+0100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Removing our presence to clients, eg. removing this address from the registry: [7905fc75-8a2c-4bb7-942a-06dffb65b711 port:63245, addresses:[localhost/127.0.0.1]]
+2025-01-26T16:12:37.409+0100 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [7905fc75-8a2c-4bb7-942a-06dffb65b711 port:63245, addresses:[localhost/127.0.0.1]]
+2025-01-26T16:12:37.411+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2025-01-26T16:12:37.411+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:12:37.412+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:12:37.413+0100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Address removed from registry.
+2025-01-26T16:12:37.418+0100 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for jars (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\jars-9)
+2025-01-26T16:12:37.418+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on jars (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\jars-9).
+2025-01-26T16:12:37.419+0100 [DEBUG] [org.gradle.cache.internal.DefaultCacheCleanupExecutor] jars (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\jars-9) has last been fully cleaned up 26 hours ago
+2025-01-26T16:12:37.420+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Clean up jars (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\jars-9)' started
+2025-01-26T16:12:37.424+0100 [INFO] [org.gradle.cache.internal.AbstractCacheCleanup] jars (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\jars-9) cleanup deleted 0 files/directories.
+2025-01-26T16:12:37.426+0100 [INFO] [org.gradle.cache.internal.LeastRecentlyUsedCacheCleanup] jars (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\jars-9) removing files not accessed on or after Sun Jan 19 16:12:37 CET 2025.
+2025-01-26T16:12:37.429+0100 [INFO] [org.gradle.cache.internal.AbstractCacheCleanup] jars (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\jars-9) cleanup deleted 0 files/directories.
+2025-01-26T16:12:37.429+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Clean up jars (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\jars-9)'
+2025-01-26T16:12:37.429+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Clean up jars (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\jars-9)' completed
+2025-01-26T16:12:37.430+0100 [INFO] [org.gradle.cache.internal.DefaultCacheCleanupExecutor] jars (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\jars-9) cleaned up in 0.01 secs.
+2025-01-26T16:12:37.430+0100 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for file content cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\fileContent)
+2025-01-26T16:12:37.431+0100 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache annotation-processors.bin (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\fileContent\annotation-processors.bin)
+2025-01-26T16:12:37.431+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on file content cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\fileContent).
+2025-01-26T16:12:37.432+0100 [DEBUG] [org.gradle.internal.watch.vfs.impl.WatchingVirtualFileSystem] Closing VFS, dropping state
+2025-01-26T16:12:37.434+0100 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache Generated Gradle JARs cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\generated-gradle-jars) was closed 0 times.
+2025-01-26T16:12:37.434+0100 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for artifact cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2)
+2025-01-26T16:12:37.434+0100 [DEBUG] [org.gradle.internal.watch.registry.impl.DefaultFileWatcherRegistry] Finished listening to file system change events
+2025-01-26T16:12:37.434+0100 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-artifact.bin (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2\metadata-2.107\module-artifact.bin)
+2025-01-26T16:12:37.435+0100 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-metadata.bin (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2\metadata-2.107\module-metadata.bin)
+2025-01-26T16:12:37.435+0100 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache resource-at-url.bin (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2\metadata-2.107\resource-at-url.bin)
+2025-01-26T16:12:37.435+0100 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache module-artifacts.bin (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2\metadata-2.107\module-artifacts.bin)
+2025-01-26T16:12:37.435+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on artifact cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2).
+2025-01-26T16:12:37.435+0100 [DEBUG] [org.gradle.cache.internal.DefaultCacheCleanupExecutor] artifact cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2) has last been fully cleaned up 26 hours ago
+2025-01-26T16:12:37.436+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Clean up artifact cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2)' started
+2025-01-26T16:12:37.437+0100 [INFO] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2) cleanup deleted 0 files/directories.
+2025-01-26T16:12:37.438+0100 [INFO] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2) [subdir: C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2\resources-2.1] cleanup deleted 0 files/directories.
+2025-01-26T16:12:37.438+0100 [INFO] [org.gradle.cache.internal.LeastRecentlyUsedCacheCleanup] artifact cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2) [subdir: C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2\resources-2.1] removing files not accessed on or after Fri Dec 27 16:12:37 CET 2024.
+2025-01-26T16:12:37.440+0100 [INFO] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2) [subdir: C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2\resources-2.1] cleanup deleted 0 files/directories.
+2025-01-26T16:12:37.441+0100 [INFO] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2) [subdir: C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2\files-2.1] cleanup deleted 0 files/directories.
+2025-01-26T16:12:37.441+0100 [INFO] [org.gradle.cache.internal.LeastRecentlyUsedCacheCleanup] artifact cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2) [subdir: C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2\files-2.1] removing files not accessed on or after Fri Dec 27 16:12:37 CET 2024.
+2025-01-26T16:12:37.503+0100 [INFO] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2) [subdir: C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2\files-2.1] cleanup deleted 0 files/directories.
+2025-01-26T16:12:37.504+0100 [INFO] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2) [subdir: C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2\metadata-2.107] cleanup deleted 0 files/directories.
+2025-01-26T16:12:37.505+0100 [INFO] [org.gradle.cache.internal.AbstractCacheCleanup] artifact cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2) cleanup deleted 0 files/directories.
+2025-01-26T16:12:37.505+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Clean up artifact cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2)'
+2025-01-26T16:12:37.506+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Clean up artifact cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2)' completed
+2025-01-26T16:12:37.506+0100 [INFO] [org.gradle.cache.internal.DefaultCacheCleanupExecutor] artifact cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\modules-2) cleaned up in 0.07 secs.
+2025-01-26T16:12:37.506+0100 [DEBUG] [org.gradle.cache.internal.DefaultCacheCleanupExecutor] groovy-dsl (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\groovy-dsl) has last been fully cleaned up 26 hours ago
+2025-01-26T16:12:37.506+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Clean up groovy-dsl (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\groovy-dsl)' started
+2025-01-26T16:12:37.506+0100 [INFO] [org.gradle.cache.internal.LeastRecentlyUsedCacheCleanup] groovy-dsl (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\groovy-dsl) removing files not accessed on or after Sun Jan 19 16:12:37 CET 2025.
+2025-01-26T16:12:37.507+0100 [INFO] [org.gradle.cache.internal.AbstractCacheCleanup] groovy-dsl (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\groovy-dsl) cleanup deleted 0 files/directories.
+2025-01-26T16:12:37.507+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Clean up groovy-dsl (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\groovy-dsl)'
+2025-01-26T16:12:37.507+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Clean up groovy-dsl (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\groovy-dsl)' completed
+2025-01-26T16:12:37.507+0100 [INFO] [org.gradle.cache.internal.DefaultCacheCleanupExecutor] groovy-dsl (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\groovy-dsl) cleaned up in 0.001 secs.
+2025-01-26T16:12:37.507+0100 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache groovy-dsl (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\groovy-dsl) was closed 0 times.
+2025-01-26T16:12:37.508+0100 [DEBUG] [org.gradle.cache.internal.DefaultCacheCleanupExecutor] Artifact transforms cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\transforms) has last been fully cleaned up 26 hours ago
+2025-01-26T16:12:37.508+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Clean up Artifact transforms cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\transforms)' started
+2025-01-26T16:12:37.508+0100 [INFO] [org.gradle.cache.internal.LeastRecentlyUsedCacheCleanup] Artifact transforms cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\transforms) removing files not accessed on or after Sun Jan 19 16:12:37 CET 2025.
+2025-01-26T16:12:37.511+0100 [INFO] [org.gradle.cache.internal.AbstractCacheCleanup] Artifact transforms cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\transforms) cleanup deleted 0 files/directories.
+2025-01-26T16:12:37.512+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Clean up Artifact transforms cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\transforms)'
+2025-01-26T16:12:37.512+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Clean up Artifact transforms cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\transforms)' completed
+2025-01-26T16:12:37.512+0100 [INFO] [org.gradle.cache.internal.DefaultCacheCleanupExecutor] Artifact transforms cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\transforms) cleaned up in 0.004 secs.
+2025-01-26T16:12:37.512+0100 [DEBUG] [org.gradle.cache.internal.DefaultCacheCoordinator] Cache Artifact transforms cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\transforms) was closed 0 times.
+2025-01-26T16:12:37.512+0100 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for journal cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\journal-1)
+2025-01-26T16:12:37.512+0100 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache file-access.bin (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\journal-1\file-access.bin)
+2025-01-26T16:12:37.512+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on journal cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\journal-1).
+2025-01-26T16:12:37.513+0100 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for file hash cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\fileHashes)
+2025-01-26T16:12:37.513+0100 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache fileHashes.bin (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\fileHashes\fileHashes.bin)
+2025-01-26T16:12:37.513+0100 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache resourceHashesCache.bin (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\fileHashes\resourceHashesCache.bin)
+2025-01-26T16:12:37.513+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on file hash cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\fileHashes).
+2025-01-26T16:12:37.514+0100 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for Java compile cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\javaCompile)
+2025-01-26T16:12:37.514+0100 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache jarAnalysis.bin (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\javaCompile\jarAnalysis.bin)
+2025-01-26T16:12:37.514+0100 [DEBUG] [org.gradle.cache.internal.btree.BTreePersistentIndexedCache] Closing cache classAnalysis.bin (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\javaCompile\classAnalysis.bin)
+2025-01-26T16:12:37.514+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on Java compile cache (C:\Users\ragna\Documents\dimensional_wells_1.21\caches\8.11.1\javaCompile).
+2025-01-26T16:12:37.515+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Deleting unused version-specific caches in C:\Users\ragna\Documents\dimensional_wells_1.21\caches' started
+2025-01-26T16:12:37.517+0100 [DEBUG] [org.gradle.cache.internal.VersionSpecificCacheCleanupAction] Processed version-specific caches at C:\Users\ragna\Documents\dimensional_wells_1.21\caches for cleanup in 0.001 secs
+2025-01-26T16:12:37.517+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Deleting unused version-specific caches in C:\Users\ragna\Documents\dimensional_wells_1.21\caches'
+2025-01-26T16:12:37.517+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Deleting unused version-specific caches in C:\Users\ragna\Documents\dimensional_wells_1.21\caches' completed
+2025-01-26T16:12:37.519+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Deleting unused Gradle distributions in C:\Users\ragna\Documents\dimensional_wells_1.21\wrapper\dists' started
+2025-01-26T16:12:37.530+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Completing Build operation 'Deleting unused Gradle distributions in C:\Users\ragna\Documents\dimensional_wells_1.21\wrapper\dists'
+2025-01-26T16:12:37.530+0100 [DEBUG] [org.gradle.internal.operations.DefaultBuildOperationRunner] Build operation 'Deleting unused Gradle distributions in C:\Users\ragna\Documents\dimensional_wells_1.21\wrapper\dists' completed
+2025-01-26T16:12:37.531+0100 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stop() called on daemon
+2025-01-26T16:12:37.531+0100 [INFO] [org.gradle.launcher.daemon.server.Daemon] Stop requested. Daemon is removing its presence from the registry...
+2025-01-26T16:12:37.531+0100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Removing our presence to clients, eg. removing this address from the registry: [7905fc75-8a2c-4bb7-942a-06dffb65b711 port:63245, addresses:[localhost/127.0.0.1]]
+2025-01-26T16:12:37.531+0100 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [7905fc75-8a2c-4bb7-942a-06dffb65b711 port:63245, addresses:[localhost/127.0.0.1]]
+2025-01-26T16:12:37.532+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2025-01-26T16:12:37.532+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2025-01-26T16:12:37.532+0100 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2025-01-26T16:12:37.533+0100 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Address removed from registry.
+2025-01-26T16:12:37.534+0100 [DEBUG] [org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler] File lock listener thread completed.
+2025-01-26T16:12:37.536+0100 [DEBUG] [java.lang.Runtime] Runtime.exit() called with status: 0
+java.lang.Throwable: Runtime.exit(0)
+	at java.base/java.lang.Shutdown.logRuntimeExit(Shutdown.java:179)
+	at java.base/java.lang.Shutdown.exit(Shutdown.java:160)
+	at java.base/java.lang.Runtime.exit(Runtime.java:188)
+	at java.base/java.lang.System.exit(System.java:1920)
+	at org.gradle.launcher.bootstrap.ProcessCompleter.complete(ProcessCompleter.java:21)
+	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:61)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:72)
+	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:39)
+	at org.gradle.launcher.daemon.bootstrap.GradleDaemon.main(GradleDaemon.java:22)
+Daemon vm is shutting down... The daemon has exited normally or was terminated in response to a user interrupt.
+2025-01-26T16:12:37.537+0100 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [7905fc75-8a2c-4bb7-942a-06dffb65b711 port:63245, addresses:[localhost/127.0.0.1]]
+2025-01-26T16:12:37.538+0100 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] VM shutdown hook was unable to remove the daemon address from the registry. It will be cleaned up later.
+java.lang.IllegalStateException: Cannot start managing file contention because this handler has been closed.
+	at org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler.assertNotStopped(DefaultFileLockContentionHandler.java:217)
+	at org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler.getCommunicator(DefaultFileLockContentionHandler.java:260)
+	at org.gradle.cache.internal.locklistener.DefaultFileLockContentionHandler.reservePort(DefaultFileLockContentionHandler.java:254)
+	at org.gradle.cache.internal.DefaultFileLockManager.lock(DefaultFileLockManager.java:124)
+	at org.gradle.cache.internal.DefaultFileLockManager.lock(DefaultFileLockManager.java:106)
+	at org.gradle.cache.internal.DefaultFileLockManager.lock(DefaultFileLockManager.java:101)
+	at org.gradle.cache.internal.OnDemandFileAccess.updateFile(OnDemandFileAccess.java:51)
+	at org.gradle.cache.internal.FileBackedObjectHolder.update(FileBackedObjectHolder.java:77)
+	at org.gradle.cache.internal.FileIntegrityViolationSuppressingObjectHolderDecorator.lambda$update$0(FileIntegrityViolationSuppressingObjectHolderDecorator.java:48)
+	at org.gradle.cache.internal.FileIntegrityViolationSuppressingObjectHolderDecorator.doUpdate(FileIntegrityViolationSuppressingObjectHolderDecorator.java:58)
+	at org.gradle.cache.internal.FileIntegrityViolationSuppressingObjectHolderDecorator.update(FileIntegrityViolationSuppressingObjectHolderDecorator.java:48)
+	at org.gradle.launcher.daemon.registry.PersistentDaemonRegistry.remove(PersistentDaemonRegistry.java:133)
+	at org.gradle.launcher.daemon.server.Daemon$1.run(Daemon.java:133)
+	at java.base/java.lang.Thread.run(Thread.java:1583)

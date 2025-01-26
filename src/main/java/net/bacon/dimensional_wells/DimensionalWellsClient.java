@@ -10,5 +10,6 @@ public class DimensionalWellsClient implements ClientModInitializer {
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.SCULK_WELL_BLOCK, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.NETHER_WELL_BLOCK, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.END_WELL_BLOCK, RenderLayer.getCutout());
     }
 }
