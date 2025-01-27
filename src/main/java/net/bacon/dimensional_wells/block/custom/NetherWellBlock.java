@@ -173,6 +173,36 @@ public class NetherWellBlock extends Block {
                 }
                 trigger = true;
             }
+            // MYCELIUM TO NYLIUM (100%)
+            if (itemEntity.getStack().getItem() == Items.MYCELIUM) {
+                int itemAmount = itemEntity.getStack().getCount();
+                itemEntity.setStack(new ItemStack(Items.AIR));
+                for (int i = 0; i < itemAmount; i++) {
+                    if (Math.random() <= 0.5) {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.CRIMSON_NYLIUM.getDefaultStack()));
+                    } else {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.WARPED_NYLIUM.getDefaultStack()));
+                    }
+                }
+                trigger = true;
+            }
+            // VINE TO NETHER VINES
+            if (itemEntity.getStack().getItem() == Items.VINE) {
+                int itemAmount = itemEntity.getStack().getCount();
+                itemEntity.setStack(new ItemStack(Items.AIR));
+                for (int i = 0; i < itemAmount; i++) {
+                    if (Math.random() <= 0.5) {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.WEEPING_VINES.getDefaultStack()));
+                    } else {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.TWISTING_VINES.getDefaultStack()));
+                    }
+                }
+                trigger = true;
+            }
             if (itemEntity.getStack().getItem() == Items.WARPED_FUNGUS) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
@@ -270,26 +300,12 @@ public class NetherWellBlock extends Block {
                 }
                 trigger = true;
             }
-            // STONE INTO BLACKSTONE (75%)
-            if (itemEntity.getStack().getItem() == Items.STONE) {
-                int itemAmount = itemEntity.getStack().getCount();
-                itemEntity.setStack(new ItemStack(Items.AIR));
-                for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.75) {
-                        TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.BLACKSTONE.getDefaultStack()));
-                    } else {
-                        AnnihilationParticles(world,pos);
-                    }
-                }
-                trigger = true;
-            }
-            // COBBLESTONE INTO BLACKSTONE (75%)
+            // COBBLESTONE INTO BLACKSTONE (100%)
             if (itemEntity.getStack().getItem() == Items.COBBLESTONE) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.75) {
+                    if (Math.random() <= 1f) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.BLACKSTONE.getDefaultStack()));
                     } else {
@@ -298,6 +314,165 @@ public class NetherWellBlock extends Block {
                 }
                 trigger = true;
             }
+            if (itemEntity.getStack().getItem() == Items.COBBLESTONE_STAIRS) {
+                int itemAmount = itemEntity.getStack().getCount();
+                itemEntity.setStack(new ItemStack(Items.AIR));
+                for (int i = 0; i < itemAmount; i++) {
+                    if (Math.random() <= 1f) {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.BLACKSTONE_STAIRS.getDefaultStack()));
+                    } else {
+                        AnnihilationParticles(world,pos);
+                    }
+                }
+                trigger = true;
+            }
+            if (itemEntity.getStack().getItem() == Items.COBBLESTONE_SLAB) {
+                int itemAmount = itemEntity.getStack().getCount();
+                itemEntity.setStack(new ItemStack(Items.AIR));
+                for (int i = 0; i < itemAmount; i++) {
+                    if (Math.random() <= 1f) {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.BLACKSTONE_SLAB.getDefaultStack()));
+                    } else {
+                        AnnihilationParticles(world,pos);
+                    }
+                }
+                trigger = true;
+            }
+            if (itemEntity.getStack().getItem() == Items.COBBLESTONE_WALL) {
+                int itemAmount = itemEntity.getStack().getCount();
+                itemEntity.setStack(new ItemStack(Items.AIR));
+                for (int i = 0; i < itemAmount; i++) {
+                    if (Math.random() <= 1f) {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.BLACKSTONE_WALL.getDefaultStack()));
+                    } else {
+                        AnnihilationParticles(world,pos);
+                    }
+                }
+                trigger = true;
+            }
+            // STONE INTO POLISHED BLACKSTONE (100%)
+            if (itemEntity.getStack().getItem() == Items.STONE) {
+                int itemAmount = itemEntity.getStack().getCount();
+                itemEntity.setStack(new ItemStack(Items.AIR));
+                for (int i = 0; i < itemAmount; i++) {
+                    if (Math.random() <= 1f) {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.POLISHED_BLACKSTONE.getDefaultStack()));
+                    } else {
+                        AnnihilationParticles(world,pos);
+                    }
+                }
+                trigger = true;
+            }
+            if (itemEntity.getStack().getItem() == Items.STONE_STAIRS) {
+                int itemAmount = itemEntity.getStack().getCount();
+                itemEntity.setStack(new ItemStack(Items.AIR));
+                for (int i = 0; i < itemAmount; i++) {
+                    if (Math.random() <= 1f) {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.POLISHED_BLACKSTONE_STAIRS.getDefaultStack()));
+                    } else {
+                        AnnihilationParticles(world,pos);
+                    }
+                }
+                trigger = true;
+            }
+            if (itemEntity.getStack().getItem() == Items.STONE_SLAB) {
+                int itemAmount = itemEntity.getStack().getCount();
+                itemEntity.setStack(new ItemStack(Items.AIR));
+                for (int i = 0; i < itemAmount; i++) {
+                    if (Math.random() <= 1f) {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.POLISHED_BLACKSTONE_SLAB.getDefaultStack()));
+                    } else {
+                        AnnihilationParticles(world,pos);
+                    }
+                }
+                trigger = true;
+            }
+            // STONE BRICKS TO BLACKSTONE BRICKS (100%)
+            if (itemEntity.getStack().getItem() == Items.STONE_BRICKS) {
+                int itemAmount = itemEntity.getStack().getCount();
+                itemEntity.setStack(new ItemStack(Items.AIR));
+                for (int i = 0; i < itemAmount; i++) {
+                    if (Math.random() <= 1f) {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.POLISHED_BLACKSTONE_BRICKS.getDefaultStack()));
+                    } else {
+                        AnnihilationParticles(world,pos);
+                    }
+                }
+                trigger = true;
+            }
+            if (itemEntity.getStack().getItem() == Items.STONE_BRICK_STAIRS) {
+                int itemAmount = itemEntity.getStack().getCount();
+                itemEntity.setStack(new ItemStack(Items.AIR));
+                for (int i = 0; i < itemAmount; i++) {
+                    if (Math.random() <= 1f) {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.POLISHED_BLACKSTONE_BRICK_STAIRS.getDefaultStack()));
+                    } else {
+                        AnnihilationParticles(world,pos);
+                    }
+                }
+                trigger = true;
+            }
+            if (itemEntity.getStack().getItem() == Items.STONE_BRICK_SLAB) {
+                int itemAmount = itemEntity.getStack().getCount();
+                itemEntity.setStack(new ItemStack(Items.AIR));
+                for (int i = 0; i < itemAmount; i++) {
+                    if (Math.random() <= 1f) {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.POLISHED_BLACKSTONE_BRICK_SLAB.getDefaultStack()));
+                    } else {
+                        AnnihilationParticles(world,pos);
+                    }
+                }
+                trigger = true;
+            }
+            if (itemEntity.getStack().getItem() == Items.CRACKED_STONE_BRICKS) {
+                int itemAmount = itemEntity.getStack().getCount();
+                itemEntity.setStack(new ItemStack(Items.AIR));
+                for (int i = 0; i < itemAmount; i++) {
+                    if (Math.random() <= 1f) {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.CRACKED_POLISHED_BLACKSTONE_BRICKS.getDefaultStack()));
+                    } else {
+                        AnnihilationParticles(world,pos);
+                    }
+                }
+                trigger = true;
+            }
+            if (itemEntity.getStack().getItem() == Items.CHISELED_STONE_BRICKS) {
+                int itemAmount = itemEntity.getStack().getCount();
+                itemEntity.setStack(new ItemStack(Items.AIR));
+                for (int i = 0; i < itemAmount; i++) {
+                    if (Math.random() <= 1f) {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.CHISELED_POLISHED_BLACKSTONE.getDefaultStack()));
+                    } else {
+                        AnnihilationParticles(world,pos);
+                    }
+                }
+                trigger = true;
+            }
+            if (itemEntity.getStack().getItem() == Items.STONE_BRICK_WALL) {
+                int itemAmount = itemEntity.getStack().getCount();
+                itemEntity.setStack(new ItemStack(Items.AIR));
+                for (int i = 0; i < itemAmount; i++) {
+                    if (Math.random() <= 1f) {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.POLISHED_BLACKSTONE_BRICK_WALL.getDefaultStack()));
+                    } else {
+                        AnnihilationParticles(world,pos);
+                    }
+                }
+                trigger = true;
+            }
+
             // DIRT INTO NETHERRACK (100%)
             if (itemEntity.getStack().getItem() == Items.DIRT) {
                 int itemAmount = itemEntity.getStack().getCount();
@@ -312,22 +487,23 @@ public class NetherWellBlock extends Block {
                 }
                 trigger = true;
             }
-            // SEA LANTERN INTO SHROOMLIGHT (90%)
-            if (itemEntity.getStack().getItem() == Items.SEA_LANTERN) {
+            // STEM INTO NETHER STEM (100%)
+            if (itemEntity.getStack().getItem() == Items.MUSHROOM_STEM) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.9) {
+                    if (Math.random() <= 0.5f) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.SHROOMLIGHT.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.CRIMSON_STEM.getDefaultStack()));
                     } else {
-                        AnnihilationParticles(world,pos);
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.WARPED_STEM.getDefaultStack()));
                     }
                 }
                 trigger = true;
             }
-            // POPPY / ROSE BUSH (10%)
-            if (itemEntity.getStack().getItem() == Items.ROSE_BUSH || itemEntity.getStack().getItem() == Items.POPPY) {
+            // ROSE BUSH TO WITHER ROSE (10%)
+            if (itemEntity.getStack().getItem() == Items.ROSE_BUSH) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
