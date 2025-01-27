@@ -23,6 +23,8 @@ import net.minecraft.world.World;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
+import static net.bacon.dimensional_wells.config.ModConfigs.*;
+
 public class SculkWellBlock extends Block {
 
     private final VoxelShape SHAPE = Block.createCuboidShape(0.0,0.0, 0.0, 16.0, 8.0, 16.0);
@@ -59,7 +61,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.7) {
+                    if (Math.random() <= AMETHYST_SHARD_TO_ECHO_SHARD_CHANCE || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.ECHO_SHARD.getDefaultStack()));
                     } else {
@@ -73,7 +75,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.7) {
+                    if (Math.random() <= QUARTZ_TO_AMETHYST_SHARD_CHANCE || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.AMETHYST_SHARD.getDefaultStack()));
                     } else {
@@ -87,7 +89,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.8) {
+                    if (Math.random() <= 0.8 || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.SCULK.getDefaultStack()));
                     } else {
@@ -101,7 +103,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.3f) {
+                    if (Math.random() <= 0.3f || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.MOSS_BLOCK.getDefaultStack()));
                     } else {
@@ -115,7 +117,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.75f) {
+                    if (Math.random() <= 0.75f || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.GLOW_BERRIES.getDefaultStack()));
                     } else {
@@ -129,7 +131,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.75f) {
+                    if (Math.random() <= 0.80f || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.GLOW_INK_SAC.getDefaultStack()));
                     } else {
@@ -143,7 +145,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.COBBLED_DEEPSLATE.getDefaultStack()));
                     } else {
@@ -156,7 +158,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.COBBLED_DEEPSLATE_STAIRS.getDefaultStack()));
                     } else {
@@ -169,7 +171,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.COBBLED_DEEPSLATE_SLAB.getDefaultStack()));
                     } else {
@@ -182,7 +184,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.COBBLED_DEEPSLATE_WALL.getDefaultStack()));
                     } else {
@@ -191,40 +193,14 @@ public class SculkWellBlock extends Block {
                 }
                 trigger = true;
             }
-            // STONE TO POLISHED DEEPSLATE (100%)
+            // STONE TO DEEPSLATE (100%)
             if (itemEntity.getStack().getItem() == Items.STONE) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.POLISHED_DEEPSLATE.getDefaultStack()));
-                    } else {
-                        AnnihilationParticles(world,pos);
-                    }
-                }
-                trigger = true;
-            }
-            if (itemEntity.getStack().getItem() == Items.STONE_STAIRS) {
-                int itemAmount = itemEntity.getStack().getCount();
-                itemEntity.setStack(new ItemStack(Items.AIR));
-                for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
-                        TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.POLISHED_DEEPSLATE_STAIRS.getDefaultStack()));
-                    } else {
-                        AnnihilationParticles(world,pos);
-                    }
-                }
-                trigger = true;
-            }
-            if (itemEntity.getStack().getItem() == Items.STONE_SLAB) {
-                int itemAmount = itemEntity.getStack().getCount();
-                itemEntity.setStack(new ItemStack(Items.AIR));
-                for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
-                        TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.POLISHED_DEEPSLATE_SLAB.getDefaultStack()));
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.DEEPSLATE.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
@@ -236,7 +212,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.DEEPSLATE_BRICKS.getDefaultStack()));
                     } else {
@@ -249,7 +225,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.DEEPSLATE_BRICK_STAIRS.getDefaultStack()));
                     } else {
@@ -262,7 +238,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.DEEPSLATE_BRICK_SLAB.getDefaultStack()));
                     } else {
@@ -275,7 +251,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.CRACKED_DEEPSLATE_BRICKS.getDefaultStack()));
                     } else {
@@ -288,7 +264,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.DEEPSLATE_BRICK_WALL.getDefaultStack()));
                     } else {
@@ -301,7 +277,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.CHISELED_DEEPSLATE.getDefaultStack()));
                     } else {
@@ -315,7 +291,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.60) {
+                    if (Math.random() <= 0.60 || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.GLOW_LICHEN.getDefaultStack()));
                     } else {
@@ -329,7 +305,7 @@ public class SculkWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.25f) {
+                    if (Math.random() <= 0.25f || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.TINTED_GLASS.getDefaultStack()));
                     } else {

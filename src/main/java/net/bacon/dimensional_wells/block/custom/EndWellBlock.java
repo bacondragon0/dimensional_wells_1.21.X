@@ -18,6 +18,9 @@ import net.minecraft.world.World;
 
 import java.util.concurrent.ThreadLocalRandom;
 
+import static net.bacon.dimensional_wells.config.ModConfigs.BUILDING_BLOCK_CONVERSION_CHANCE;
+import static net.bacon.dimensional_wells.config.ModConfigs.ITEM_DISINTEGRATION;
+
 public class EndWellBlock extends Block {
 
     private final VoxelShape SHAPE = Block.createCuboidShape(0.0,0.0, 0.0, 16.0, 8.0, 16.0);
@@ -54,7 +57,7 @@ public class EndWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.END_STONE.getDefaultStack()));
                     } else {
@@ -68,7 +71,7 @@ public class EndWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.END_STONE.getDefaultStack()));
                     } else {
@@ -82,7 +85,7 @@ public class EndWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.8) {
+                    if (Math.random() <= 0.8 || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.SHULKER_SHELL.getDefaultStack()));
                     } else {
@@ -96,7 +99,7 @@ public class EndWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1.0f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.DRAGON_BREATH.getDefaultStack()));
                     } else {
@@ -110,7 +113,7 @@ public class EndWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1.0f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.CHORUS_FRUIT.getDefaultStack()));
                     } else {
@@ -124,7 +127,7 @@ public class EndWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.3) {
+                    if (Math.random() <= 0.3 || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.END_ROD.getDefaultStack()));
                     } else {
@@ -138,7 +141,7 @@ public class EndWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.END_STONE_BRICKS.getDefaultStack()));
                     } else {
@@ -151,7 +154,7 @@ public class EndWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.END_STONE_BRICK_STAIRS.getDefaultStack()));
                     } else {
@@ -164,7 +167,7 @@ public class EndWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.END_STONE_BRICK_SLAB.getDefaultStack()));
                     } else {
@@ -177,7 +180,7 @@ public class EndWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.END_STONE_BRICK_WALL.getDefaultStack()));
                     } else {
@@ -191,7 +194,7 @@ public class EndWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.PURPUR_BLOCK.getDefaultStack()));
                     } else {
@@ -204,7 +207,7 @@ public class EndWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.PURPUR_STAIRS.getDefaultStack()));
                     } else {
@@ -217,7 +220,7 @@ public class EndWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.PURPUR_SLAB.getDefaultStack()));
                     } else {
@@ -230,7 +233,7 @@ public class EndWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.PURPUR_PILLAR.getDefaultStack()));
                     } else {

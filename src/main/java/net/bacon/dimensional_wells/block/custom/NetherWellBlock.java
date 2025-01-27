@@ -18,6 +18,9 @@ import net.minecraft.world.World;
 
 import java.util.concurrent.ThreadLocalRandom;
 
+import static net.bacon.dimensional_wells.config.ModConfigs.BUILDING_BLOCK_CONVERSION_CHANCE;
+import static net.bacon.dimensional_wells.config.ModConfigs.ITEM_DISINTEGRATION;
+
 public class NetherWellBlock extends Block {
 
     private final VoxelShape SHAPE = Block.createCuboidShape(0.0,0.0, 0.0, 16.0, 8.0, 16.0);
@@ -68,7 +71,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.9) {
+                    if (Math.random() <= 0.9 || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.GLOWSTONE_DUST.getDefaultStack()));
                     } else {
@@ -82,7 +85,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.4) {
+                    if (Math.random() <= 0.4 || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.CRYING_OBSIDIAN.getDefaultStack()));
                     } else {
@@ -110,7 +113,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1.0) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.NETHER_BRICK.getDefaultStack()));
                     } else {
@@ -123,7 +126,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1.0) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.NETHER_BRICKS.getDefaultStack()));
                     } else {
@@ -137,7 +140,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.7) {
+                    if (Math.random() <= 0.7 || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.CRIMSON_FUNGUS.getDefaultStack()));
                     } else {
@@ -150,7 +153,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.7) {
+                    if (Math.random() <= 0.7 || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.WARPED_FUNGUS.getDefaultStack()));
                     } else {
@@ -159,12 +162,12 @@ public class NetherWellBlock extends Block {
                 }
                 trigger = true;
             }
-            // FUNGUS TO MUSHROOM (70%)
+            // CRIMSON FUNGUS TO MUSHROOM (70%)
             if (itemEntity.getStack().getItem() == Items.CRIMSON_FUNGUS) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.7) {
+                    if (Math.random() <= 0.7 || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.RED_MUSHROOM.getDefaultStack()));
                     } else {
@@ -203,11 +206,12 @@ public class NetherWellBlock extends Block {
                 }
                 trigger = true;
             }
+            // WARPED FUNGUS TO BROWN MUSHROOM (70%)
             if (itemEntity.getStack().getItem() == Items.WARPED_FUNGUS) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.7) {
+                    if (Math.random() <= 0.7 || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.BROWN_MUSHROOM.getDefaultStack()));
                     } else {
@@ -221,7 +225,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.5) {
+                    if (Math.random() <= 0.5 || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.SOUL_SAND.getDefaultStack()));
                     } else {
@@ -235,7 +239,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.5) {
+                    if (Math.random() <= 0.5 || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.MAGMA_CREAM.getDefaultStack()));
                     } else {
@@ -249,7 +253,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.4) {
+                    if (Math.random() <= 0.4 || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.MAGMA_BLOCK.getDefaultStack()));
                     } else {
@@ -263,7 +267,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.9) {
+                    if (Math.random() <= 0.9 || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.SOUL_TORCH.getDefaultStack()));
                     } else {
@@ -277,7 +281,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.9) {
+                    if (Math.random() <= 0.9 || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.SOUL_LANTERN.getDefaultStack()));
                     } else {
@@ -291,7 +295,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.9) {
+                    if (Math.random() <= 0.9 || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.SOUL_CAMPFIRE.getDefaultStack()));
                     } else {
@@ -305,7 +309,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.BLACKSTONE.getDefaultStack()));
                     } else {
@@ -318,7 +322,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.BLACKSTONE_STAIRS.getDefaultStack()));
                     } else {
@@ -331,7 +335,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.BLACKSTONE_SLAB.getDefaultStack()));
                     } else {
@@ -344,7 +348,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.BLACKSTONE_WALL.getDefaultStack()));
                     } else {
@@ -358,7 +362,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.POLISHED_BLACKSTONE.getDefaultStack()));
                     } else {
@@ -371,7 +375,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.POLISHED_BLACKSTONE_STAIRS.getDefaultStack()));
                     } else {
@@ -384,7 +388,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.POLISHED_BLACKSTONE_SLAB.getDefaultStack()));
                     } else {
@@ -398,7 +402,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.POLISHED_BLACKSTONE_BRICKS.getDefaultStack()));
                     } else {
@@ -411,7 +415,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.POLISHED_BLACKSTONE_BRICK_STAIRS.getDefaultStack()));
                     } else {
@@ -424,7 +428,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.POLISHED_BLACKSTONE_BRICK_SLAB.getDefaultStack()));
                     } else {
@@ -437,7 +441,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.CRACKED_POLISHED_BLACKSTONE_BRICKS.getDefaultStack()));
                     } else {
@@ -450,7 +454,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.CHISELED_POLISHED_BLACKSTONE.getDefaultStack()));
                     } else {
@@ -463,7 +467,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1f) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.POLISHED_BLACKSTONE_BRICK_WALL.getDefaultStack()));
                     } else {
@@ -478,7 +482,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 1.0) {
+                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.NETHERRACK.getDefaultStack()));
                     } else {
@@ -507,7 +511,7 @@ public class NetherWellBlock extends Block {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.1) {
+                    if (Math.random() <= 0.1 || !ITEM_DISINTEGRATION) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.WITHER_ROSE.getDefaultStack()));
                     } else {
