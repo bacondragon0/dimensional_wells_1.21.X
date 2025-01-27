@@ -41,7 +41,9 @@ public class EndWellBlock extends Block {
                 3, Math.random() / 5, (Math.random() / 10) * 1,Math.random() / 5,0.1f);
     }
 
-    float v = 0.8f;
+    float v = 0.7f;
+
+    boolean trigger = false;
 
     @Override
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
@@ -59,19 +61,21 @@ public class EndWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
-            // COBBLESTONE TO END STONE (25%)
+            // COBBLESTONE TO END STONE (75%)
             if (itemEntity.getStack().getItem() == Items.COBBLESTONE) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.25) {
+                    if (Math.random() <= 0.75) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.END_STONE.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             // NAUTILUS SHELL TO SHULKER SHELL (80%)
             if (itemEntity.getStack().getItem() == Items.NAUTILUS_SHELL) {
@@ -85,6 +89,7 @@ public class EndWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             // WATER BOTTLE TO DRAGON BREATH (100%)
             if (itemEntity.getStack().getItem() == Items.POTION) {
@@ -98,11 +103,12 @@ public class EndWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             // APPLE TO CHORUS FRUIT (70%)
             if (itemEntity.getStack().getItem() == Items.APPLE) {
                 int itemAmount = itemEntity.getStack().getCount();
-                itemEntity.setStack(new ItemStack(Items.CHORUS_FRUIT));
+                itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
                     if (Math.random() <= 1.0) {
                         TransformationParticles(world,pos);
@@ -111,10 +117,25 @@ public class EndWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
+            }
+            // TORCH TO END ROD (30%)
+            if (itemEntity.getStack().getItem() == Items.TORCH) {
+                int itemAmount = itemEntity.getStack().getCount();
+                itemEntity.setStack(new ItemStack(Items.AIR));
+                for (int i = 0; i < itemAmount; i++) {
+                    if (Math.random() <= 0.3) {
+                        TransformationParticles(world,pos);
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.END_ROD.getDefaultStack()));
+                    } else {
+                        AnnihilationParticles(world,pos);
+                    }
+                }
+                trigger = true;
             }
             // RETURN INVALID ITEM
-            else {
-                itemEntity.addVelocity(ThreadLocalRandom.current().nextDouble(-0.3, 0.3),0.1f, ThreadLocalRandom.current().nextDouble(-0.3, 0.3));
+            else if (!trigger) {
+                itemEntity.addVelocity(ThreadLocalRandom.current().nextDouble(-0.3, 0.3),0.4, ThreadLocalRandom.current().nextDouble(-0.4, 0.4));
                 for (int i = 0; i < 1; i++) {
                     ((ServerWorld) world).spawnParticles(ParticleTypes.SMOKE, pos.getX() + 0.5f, pos.getY() + 1.1, pos.getZ() + 0.5f,
                             3, Math.random() / 5, (Math.random() / 10) * -1,Math.random() / 5,0.1f);
@@ -123,6 +144,7 @@ public class EndWellBlock extends Block {
                 }
             }
         }
+        trigger = false;
     }
 
     public EndWellBlock(Settings settings) {

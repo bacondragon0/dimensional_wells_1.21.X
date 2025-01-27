@@ -27,7 +27,9 @@ public class NetherWellBlock extends Block {
         return SHAPE;
     }
 
-    float v = 0.8f;
+    float v = 0.7f;
+
+    boolean trigger = false;
 
     private void TransformationParticles(World world, BlockPos pos) {
         ((ServerWorld) world).spawnParticles(ParticleTypes.SOUL, pos.getX() + 0.5f, pos.getY() + 1.1, pos.getZ() + 0.5f,
@@ -47,55 +49,6 @@ public class NetherWellBlock extends Block {
     public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
         if (entity instanceof ItemEntity itemEntity && world instanceof ServerWorld) {
             world.playSoundFromEntity(null, entity, SoundEvents.ENTITY_PLAYER_TELEPORT, SoundCategory.PLAYERS, 1.0f, 0.6f);
-            // IRON TO GOLD (70%)
-            if (itemEntity.getStack().getItem() == Items.IRON_INGOT) {
-                int itemAmount = itemEntity.getStack().getCount();
-                itemEntity.setStack(new ItemStack(Items.AIR));
-                for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.7) {
-                        TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.GOLD_INGOT.getDefaultStack()));
-                    } else {
-                        AnnihilationParticles(world,pos);
-                    }
-                }
-            }
-            if (itemEntity.getStack().getItem() == Items.RAW_IRON) {
-                int itemAmount = itemEntity.getStack().getCount();
-                itemEntity.setStack(new ItemStack(Items.AIR));
-                for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.7) {
-                        TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.RAW_GOLD.getDefaultStack()));
-                    } else {
-                        AnnihilationParticles(world,pos);
-                    }
-                }
-            }
-            if (itemEntity.getStack().getItem() == Items.IRON_NUGGET) {
-                int itemAmount = itemEntity.getStack().getCount();
-                itemEntity.setStack(new ItemStack(Items.AIR));
-                for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.7) {
-                        TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.GOLD_NUGGET.getDefaultStack()));
-                    } else {
-                        AnnihilationParticles(world,pos);
-                    }
-                }
-            }
-            if (itemEntity.getStack().getItem() == Items.IRON_BLOCK) {
-                int itemAmount = itemEntity.getStack().getCount();
-                itemEntity.setStack(new ItemStack(Items.AIR));
-                for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.7) {
-                        TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.GOLD_BLOCK.getDefaultStack()));
-                    } else {
-                        AnnihilationParticles(world,pos);
-                    }
-                }
-            }
             // AMETHYST TO QUARTZ (100%)
             if (itemEntity.getStack().getItem() == Items.AMETHYST_SHARD) {
                 int itemAmount = itemEntity.getStack().getCount();
@@ -108,6 +61,7 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             // REDSTONE TO GLOWSTONE (90%)
             if (itemEntity.getStack().getItem() == Items.REDSTONE) {
@@ -121,19 +75,7 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
-            }
-            // DIAMOND TO NETHERITE SCRAP (10%)
-            if (itemEntity.getStack().getItem() == Items.DIAMOND) {
-                int itemAmount = itemEntity.getStack().getCount();
-                itemEntity.setStack(new ItemStack(Items.AIR));
-                for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.1) {
-                        TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.NETHERITE_SCRAP.getDefaultStack()));
-                    } else {
-                        AnnihilationParticles(world,pos);
-                    }
-                }
+                trigger = true;
             }
             // OBSIDIAN TO CRYING OBSIDIAN (40%)
             if (itemEntity.getStack().getItem() == Items.OBSIDIAN) {
@@ -147,6 +89,7 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             // CRYING OBSIDIAN TO OBSIDIAN (100%)
             if (itemEntity.getStack().getItem() == Items.CRYING_OBSIDIAN) {
@@ -160,6 +103,7 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             // BRICKS TO NETHER BRICKS (100%)
             if (itemEntity.getStack().getItem() == Items.BRICK) {
@@ -173,6 +117,7 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             if (itemEntity.getStack().getItem() == Items.BRICKS) {
                 int itemAmount = itemEntity.getStack().getCount();
@@ -185,6 +130,7 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             // MUSHROOM TO FUNGUS (70%)
             if (itemEntity.getStack().getItem() == Items.RED_MUSHROOM) {
@@ -198,6 +144,7 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             if (itemEntity.getStack().getItem() == Items.BROWN_MUSHROOM) {
                 int itemAmount = itemEntity.getStack().getCount();
@@ -210,6 +157,7 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             // FUNGUS TO MUSHROOM (70%)
             if (itemEntity.getStack().getItem() == Items.CRIMSON_FUNGUS) {
@@ -223,6 +171,7 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             if (itemEntity.getStack().getItem() == Items.WARPED_FUNGUS) {
                 int itemAmount = itemEntity.getStack().getCount();
@@ -235,6 +184,7 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             // SAND INTO SOUL SAND (50%)
             if (itemEntity.getStack().getItem() == Items.SAND) {
@@ -248,6 +198,7 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             // SLIMEBALL INTO MAGMA CREAM (50%)
             if (itemEntity.getStack().getItem() == Items.SLIME_BALL) {
@@ -261,6 +212,7 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             // GRAVEL INTO MAGMA BLOCK (40%)
             if (itemEntity.getStack().getItem() == Items.GRAVEL) {
@@ -274,6 +226,7 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             // TORCH INTO SOUL TORCH (90%)
             if (itemEntity.getStack().getItem() == Items.TORCH) {
@@ -287,6 +240,7 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             // LANTERN INTO SOUL LANTERN (90%)
             if (itemEntity.getStack().getItem() == Items.LANTERN) {
@@ -300,6 +254,7 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             // CAMPFIRE INTO SOUL CAMPFIRE (90%)
             if (itemEntity.getStack().getItem() == Items.CAMPFIRE) {
@@ -313,6 +268,7 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             // STONE INTO BLACKSTONE (75%)
             if (itemEntity.getStack().getItem() == Items.STONE) {
@@ -326,19 +282,21 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
-            // COBBLESTONE INTO BLACKSTONE (25%)
+            // COBBLESTONE INTO BLACKSTONE (75%)
             if (itemEntity.getStack().getItem() == Items.COBBLESTONE) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.25) {
+                    if (Math.random() <= 0.75) {
                         TransformationParticles(world,pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.BLACKSTONE.getDefaultStack()));
                     } else {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             // DIRT INTO NETHERRACK (100%)
             if (itemEntity.getStack().getItem() == Items.DIRT) {
@@ -352,23 +310,21 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
-            // SEA LANTERN INTO FROGLIGHT (33% Each)
+            // SEA LANTERN INTO SHROOMLIGHT (90%)
             if (itemEntity.getStack().getItem() == Items.SEA_LANTERN) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    double temp = Math.random();
-                    if (temp < 0.33) {
+                    if (Math.random() <= 0.9) {
                         TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.PEARLESCENT_FROGLIGHT.getDefaultStack())); }
-                    if (temp >= 0.33 && temp <= 0.66) {
-                        TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.VERDANT_FROGLIGHT.getDefaultStack())); }
-                    if (temp > 0.66) {
-                        TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.OCHRE_FROGLIGHT.getDefaultStack())); }
+                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.SHROOMLIGHT.getDefaultStack()));
+                    } else {
+                        AnnihilationParticles(world,pos);
+                    }
                 }
+                trigger = true;
             }
             // POPPY / ROSE BUSH (10%)
             if (itemEntity.getStack().getItem() == Items.ROSE_BUSH || itemEntity.getStack().getItem() == Items.POPPY) {
@@ -382,10 +338,11 @@ public class NetherWellBlock extends Block {
                         AnnihilationParticles(world,pos);
                     }
                 }
+                trigger = true;
             }
             // RETURN INVALID ITEM
-            else {
-                itemEntity.addVelocity(ThreadLocalRandom.current().nextDouble(-0.3, 0.3),0.1f, ThreadLocalRandom.current().nextDouble(-0.3, 0.3));
+            else if (!trigger) {
+                itemEntity.addVelocity(ThreadLocalRandom.current().nextDouble(-0.3, 0.3),0.4, ThreadLocalRandom.current().nextDouble(-0.3, 0.3));
                 for (int i = 0; i < 1; i++) {
                     ((ServerWorld) world).spawnParticles(ParticleTypes.SMOKE, pos.getX() + 0.5f, pos.getY() + 1.1, pos.getZ() + 0.5f,
                             3, Math.random() / 5, (Math.random() / 10) * -1,Math.random() / 5,0.1f);
@@ -394,6 +351,7 @@ public class NetherWellBlock extends Block {
                 }
             }
         }
+        trigger = false;
     }
 
     public NetherWellBlock(Settings settings) {

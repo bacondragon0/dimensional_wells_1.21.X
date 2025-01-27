@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#N#",
+    "DDD"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:sculk"
+    },
+    "N": {
+      "item": "minecraft:nether_star"
+    },
+    "D": {
+      "item": "minecraft:deepslate_bricks"
+    }
+  },
+  "result": {
+    "id": "dimensional_wells:sculk_well_block"
+  }
+}
