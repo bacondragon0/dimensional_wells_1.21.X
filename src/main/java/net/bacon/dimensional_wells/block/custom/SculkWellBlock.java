@@ -138,20 +138,6 @@ public class SculkWellBlock extends Block {
                 }
                 trigger = true;
             }
-            // STONE TO DEEPSLATE (75%)
-            if (itemEntity.getStack().getItem() == Items.STONE) {
-                int itemAmount = itemEntity.getStack().getCount();
-                itemEntity.setStack(new ItemStack(Items.AIR));
-                for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.75f) {
-                        TransformationParticles(world,pos);
-                        world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.DEEPSLATE.getDefaultStack()));
-                    } else {
-                        AnnihilationParticles(world,pos);
-                    }
-                }
-                trigger = true;
-            }
             // COBBLESTONE TO COBBLED DEEPSLATE (100%)
             if (itemEntity.getStack().getItem() == Items.COBBLESTONE) {
                 int itemAmount = itemEntity.getStack().getCount();
