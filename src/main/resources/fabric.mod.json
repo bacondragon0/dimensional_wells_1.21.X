@@ -8,8 +8,8 @@
 		"BaconDragon_"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://legacy.curseforge.com/minecraft/mc-mods/dimensional-wells",
+		"sources": "https://github.com/bacondragon0/dimensional_wells_1.21.X"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/dimensional_wells/icon.png",
