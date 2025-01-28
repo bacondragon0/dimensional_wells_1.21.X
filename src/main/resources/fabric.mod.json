@@ -3,7 +3,7 @@
 	"id": "dimensional_wells",
 	"version": "${version}",
 	"name": "Dimensional Wells",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This mod lets you convert items into their dimensional variants, like Stone to Blackstone, using specific wells.",
 	"authors": [
 		"BaconDragon_"
 	],

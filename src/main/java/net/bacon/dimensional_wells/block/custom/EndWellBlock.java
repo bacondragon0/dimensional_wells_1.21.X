@@ -18,8 +18,7 @@ import net.minecraft.world.World;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-import static net.bacon.dimensional_wells.config.ModConfigs.BUILDING_BLOCK_CONVERSION_CHANCE;
-import static net.bacon.dimensional_wells.config.ModConfigs.ITEM_DISINTEGRATION;
+import static net.bacon.dimensional_wells.config.ModConfigs.*;
 
 public class EndWellBlock extends Block {
 
@@ -39,9 +38,9 @@ public class EndWellBlock extends Block {
 
     private void AnnihilationParticles(World world, BlockPos pos) {
         ((ServerWorld) world).spawnParticles(ParticleTypes.END_ROD, pos.getX() + 0.5f, pos.getY() + 1.1, pos.getZ() + 0.5f,
-                3, Math.random() / 5, (Math.random() / 10) * -1,Math.random() / 5,0.1f);
+                4, Math.random() / 5, (Math.random() / 10) * -1,Math.random() / 5,0.1f);
         ((ServerWorld) world).spawnParticles(ParticleTypes.END_ROD, pos.getX() + 0.5f, pos.getY() + 1.1, pos.getZ() + 0.5f,
-                3, Math.random() / 5, (Math.random() / 10) * 1,Math.random() / 5,0.1f);
+                4, Math.random() / 5, (Math.random() / 10) * 1,Math.random() / 5,0.1f);
     }
 
     float v = 0.7f;
@@ -53,7 +52,7 @@ public class EndWellBlock extends Block {
         if (entity instanceof ItemEntity itemEntity && world instanceof ServerWorld) {
             world.playSoundFromEntity(null, entity, SoundEvents.ENTITY_PLAYER_TELEPORT, SoundCategory.PLAYERS, 1.0f, 0.6f);
             // STONE TO END STONE (100%)
-            if (itemEntity.getStack().getItem() == Items.STONE) {
+            if (itemEntity.getStack().getItem() == Items.STONE && BUILDING_BLOCK_CONVERSION_CHANCE > 0) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
@@ -67,7 +66,7 @@ public class EndWellBlock extends Block {
                 trigger = true;
             }
             // COBBLESTONE TO END STONE (100%)
-            if (itemEntity.getStack().getItem() == Items.COBBLESTONE) {
+            if (itemEntity.getStack().getItem() == Items.COBBLESTONE && BUILDING_BLOCK_CONVERSION_CHANCE > 0) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
@@ -81,63 +80,63 @@ public class EndWellBlock extends Block {
                 trigger = true;
             }
             // NAUTILUS SHELL TO SHULKER SHELL (80%)
-            if (itemEntity.getStack().getItem() == Items.NAUTILUS_SHELL) {
+            if (itemEntity.getStack().getItem() == Items.NAUTILUS_SHELL && NAUTILUS_SHELL_TO_SHULKER_SHELL_CHANCE > 0) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.8 || !ITEM_DISINTEGRATION) {
-                        TransformationParticles(world,pos);
+                    if (Math.random() <= NAUTILUS_SHELL_TO_SHULKER_SHELL_CHANCE || !ITEM_DISINTEGRATION) {
+                        TransformationParticles(world, pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.SHULKER_SHELL.getDefaultStack()));
                     } else {
-                        AnnihilationParticles(world,pos);
+                        AnnihilationParticles(world, pos);
                     }
                 }
                 trigger = true;
             }
             // WATER BOTTLE TO DRAGON BREATH (100%)
-            if (itemEntity.getStack().getItem() == Items.POTION) {
+            if (itemEntity.getStack().getItem() == Items.POTION && WATER_BOTTLE_TO_DRAGON_BREATH_CHANCE > 0) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
-                        TransformationParticles(world,pos);
+                    if (Math.random() <= WATER_BOTTLE_TO_DRAGON_BREATH_CHANCE || !ITEM_DISINTEGRATION) {
+                        TransformationParticles(world, pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.DRAGON_BREATH.getDefaultStack()));
                     } else {
-                        AnnihilationParticles(world,pos);
+                        AnnihilationParticles(world, pos);
                     }
                 }
                 trigger = true;
             }
             // APPLE TO CHORUS FRUIT (70%)
-            if (itemEntity.getStack().getItem() == Items.APPLE) {
+            if (itemEntity.getStack().getItem() == Items.APPLE && APPLE_TO_CHORUS_FRUIT_CHANCE > 0) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= BUILDING_BLOCK_CONVERSION_CHANCE) {
-                        TransformationParticles(world,pos);
+                    if (Math.random() <= APPLE_TO_CHORUS_FRUIT_CHANCE || !ITEM_DISINTEGRATION) {
+                        TransformationParticles(world, pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.CHORUS_FRUIT.getDefaultStack()));
                     } else {
-                        AnnihilationParticles(world,pos);
+                        AnnihilationParticles(world, pos);
                     }
                 }
                 trigger = true;
             }
             // TORCH TO END ROD (30%)
-            if (itemEntity.getStack().getItem() == Items.TORCH) {
+            if (itemEntity.getStack().getItem() == Items.TORCH && TORCH_TO_END_ROD_CHANCE > 0) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
-                    if (Math.random() <= 0.3 || !ITEM_DISINTEGRATION) {
-                        TransformationParticles(world,pos);
+                    if (Math.random() <= TORCH_TO_END_ROD_CHANCE || !ITEM_DISINTEGRATION) {
+                        TransformationParticles(world, pos);
                         world.spawnEntity(new ItemEntity(world, pos.getX() + v, pos.getY() + v, pos.getZ() + v, Items.END_ROD.getDefaultStack()));
                     } else {
-                        AnnihilationParticles(world,pos);
+                        AnnihilationParticles(world, pos);
                     }
                 }
                 trigger = true;
             }
             // STONE BRICKS TO ENDSTONE BRICKS
-            if (itemEntity.getStack().getItem() == Items.STONE_BRICKS) {
+            if (itemEntity.getStack().getItem() == Items.STONE_BRICKS && BUILDING_BLOCK_CONVERSION_CHANCE > 0) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
@@ -150,7 +149,7 @@ public class EndWellBlock extends Block {
                 }
                 trigger = true;
             }
-            if (itemEntity.getStack().getItem() == Items.STONE_BRICK_STAIRS) {
+            if (itemEntity.getStack().getItem() == Items.STONE_BRICK_STAIRS && BUILDING_BLOCK_CONVERSION_CHANCE > 0) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
@@ -163,7 +162,7 @@ public class EndWellBlock extends Block {
                 }
                 trigger = true;
             }
-            if (itemEntity.getStack().getItem() == Items.STONE_BRICK_SLAB) {
+            if (itemEntity.getStack().getItem() == Items.STONE_BRICK_SLAB && BUILDING_BLOCK_CONVERSION_CHANCE > 0) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
@@ -176,7 +175,7 @@ public class EndWellBlock extends Block {
                 }
                 trigger = true;
             }
-            if (itemEntity.getStack().getItem() == Items.STONE_BRICK_WALL) {
+            if (itemEntity.getStack().getItem() == Items.STONE_BRICK_WALL && BUILDING_BLOCK_CONVERSION_CHANCE > 0) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
@@ -190,7 +189,7 @@ public class EndWellBlock extends Block {
                 trigger = true;
             }
             // QUARTZ BLOCKS TO PURPUR BLOCKS
-            if (itemEntity.getStack().getItem() == Items.QUARTZ_BLOCK) {
+            if (itemEntity.getStack().getItem() == Items.QUARTZ_BLOCK && BUILDING_BLOCK_CONVERSION_CHANCE > 0) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
@@ -203,7 +202,7 @@ public class EndWellBlock extends Block {
                 }
                 trigger = true;
             }
-            if (itemEntity.getStack().getItem() == Items.QUARTZ_STAIRS) {
+            if (itemEntity.getStack().getItem() == Items.QUARTZ_STAIRS && BUILDING_BLOCK_CONVERSION_CHANCE > 0) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
@@ -216,7 +215,7 @@ public class EndWellBlock extends Block {
                 }
                 trigger = true;
             }
-            if (itemEntity.getStack().getItem() == Items.QUARTZ_SLAB) {
+            if (itemEntity.getStack().getItem() == Items.QUARTZ_SLAB && BUILDING_BLOCK_CONVERSION_CHANCE > 0) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
@@ -229,7 +228,7 @@ public class EndWellBlock extends Block {
                 }
                 trigger = true;
             }
-            if (itemEntity.getStack().getItem() == Items.QUARTZ_PILLAR) {
+            if (itemEntity.getStack().getItem() == Items.QUARTZ_PILLAR && BUILDING_BLOCK_CONVERSION_CHANCE > 0) {
                 int itemAmount = itemEntity.getStack().getCount();
                 itemEntity.setStack(new ItemStack(Items.AIR));
                 for (int i = 0; i < itemAmount; i++) {
